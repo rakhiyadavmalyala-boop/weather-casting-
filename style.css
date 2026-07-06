@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url('https://res.cloudinary.com/dpqt8338m/image/upload/q_auto/f_auto/v1775113940/istockphoto-1703754111-612x612_dcyqct.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    background-size: cover;
+}
+
+
+body.dark {
+    background: linear-gradient(to top, #2c3e50, #000000);
+}
+
+
+.container {
+    text-align: center;
+    color: #222;
+    position: relative;
+    transition: color 0.5s ease;
+
+}
+
+body.dark .container {
+    color: #ffffff;
+}
+
+
+.logo {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+}
+
+
+#themeToggle {
+    position: absolute;
+    top: -10px;
+    right: -60px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+body.dark #themeToggle {
+    background: black;
+    color: white;
+}
+
+
+.search-box {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+body.dark .search-box {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.search-box input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+#city {
+    color: orange;
+}
+
+.search-box button {
+    padding: 10px;
+    border: none;
+    background: grey;
+    opacity: 0.6;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.weather-card {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+
+#img {
+    height: 30px;
+    width: 50px;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+body.dark .weather-card {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.temp {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.error-message {
+    color: red !important;
+}

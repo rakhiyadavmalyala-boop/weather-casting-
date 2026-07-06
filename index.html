@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Logo -->
+        <h1 class="logo">WeatherApp</h1>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search for your city weather" />
+            <button onclick="onSearch()">Search</button>
+        </div>
+
+        <!-- Weather Card -->
+        <div class="weather-card">
+            <h2 id="city">Vijayawada</h2>
+            <div class="country-container">
+                <span id="country">India</span>
+                <img id="img"
+                    src="https://res.cloudinary.com/dpqt8338m/image/upload/q_auto/f_auto/v1775554275/in_au7hpn.webp" />
+            </div>
+            <p id="temp" class="temp">36°C</p>
+            <p id="type">Sunny</p>
+        </div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
