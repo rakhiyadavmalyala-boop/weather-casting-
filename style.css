@@ -9,17 +9,18 @@
 
 body {
     height: 100vh;
-    background-image: url('https://res.cloudinary.com/dpqt8338m/image/upload/q_auto/f_auto/v1775113940/istockphoto-1703754111-612x612_dcyqct.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1601297183305-6df142704ea2?q=80&w=1200&auto=format&fit=crop');
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s ease;
+    transition: background-image 0.8s ease-in-out, background-color 0.5s ease;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-
 body.dark {
-    background: linear-gradient(to top, #2c3e50, #000000);
+    /* Dark mode applies an extra dark overlay via JS */
 }
 
 
@@ -139,6 +140,19 @@ body.dark .weather-card {
 .temp {
     font-size: 40px;
     margin: 10px 0;
+}
+
+.weather-type-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.weather-icon {
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .error-message {
