@@ -77,3 +77,31 @@ function onSearch() {
         });
 
 }
+
+// Toggle theme logic
+function toggleTheme() {
+    const body = document.body;
+    const themeToggleBtn = document.getElementById("themeToggle");
+    body.classList.toggle("dark");
+
+    if (body.classList.contains("dark")) {
+        themeToggleBtn.textContent = "☀️ Light";
+        localStorage.setItem("theme", "dark");
+    } else {
+        themeToggleBtn.textContent = "🌙 Dark";
+        localStorage.setItem("theme", "light");
+    }
+}
+
+// Restore saved theme on page load
+document.addEventListener("DOMContentLoaded", function () {
+    const savedTheme = localStorage.getItem("theme");
+    const themeToggleBtn = document.getElementById("themeToggle");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        if (themeToggleBtn) {
+            themeToggleBtn.textContent = "☀️ Light";
+        }
+    }
+});
